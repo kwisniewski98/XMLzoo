@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="zoo.css" ?>
+
+<zoo>
+    <gatunki>
+        <gatunek>Ssak</gatunek>
+        <gatunek>Gad</gatunek>
+        <gatunek>Ryba</gatunek>
+        <gatunek>Płaz</gatunek>
+        <gatunek>Ptak</gatunek>
+    </gatunki>
+    <rzedy>
+        <rzad gatunek="Ssak">Torbacz</rzad>
+        <rzad gatunek="Ssak">Łuskowiec</rzad>
+        <rzad gatunek="Ssak">Naczelny</rzad>
+
+        <rzad gatunek="Gad">Gad ryjogłowy</rzad>
+        <rzad gatunek="Gad">Łuskonośny</rzad>
+        <rzad gatunek="Gad">Krokodyl</rzad>
+
+        <rzad gatunek="Ryba">Igliczniokształtny</rzad>
+        <rzad gatunek="Ryba">Aterynkokształtny</rzad>
+        <rzad gatunek="Ryba">Bielonokształtny</rzad>
+        <rzad gatunek="Ryba">Rozdymkokształty</rzad>
+
+        <rzad gatunek="Płaz">Bezogonowy</rzad>
+        <rzad gatunek="Płaz">Ogoniasty</rzad>
+        <rzad gatunek="Płaz">Beznogi</rzad>
+
+        <rzad gatunek="Ptak">Struś</rzad>
+        <rzad gatunek="Ptak">Kurak</rzad>
+        <rzad gatunek="Ptak">Krótkonogi</rzad>
+
+    </rzedy>
+
+    <opiekunowie>
+        <opiekun id="1">
+            <imie>Anrzej</imie>
+            <nazwisko>Nowak</nazwisko>
+        </opiekun>
+        <opiekun id="2">
+            <imie>Grzegorz</imie>
+            <nazwisko>Kowalski</nazwisko>
+        </opiekun>
+        <opiekun id="3">
+            <imie>Anna</imie>
+            <nazwisko>Wójcik</nazwisko>
+        </opiekun>
+        <opiekun id="4">
+            <imie>Karolina</imie>
+            <nazwisko>Kowalczyk</nazwisko>
+        </opiekun>
+        <opiekun id="5">
+            <imie>Paweł</imie>
+            <nazwisko>Kamiński</nazwisko>
+        </opiekun>
+    </opiekunowie>
+    <zwierzeta>
+        <zwierze rzad="Torbacz" opiekun="1">
+            <nazwa>Koala</nazwa>
+            <ilosc plec="m">3</ilosc>
+            <ilosc plec="f">2</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">70</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">12</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Torbacz" opiekun="1">
+            <nazwa>Wombat tasmański</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">2</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">100</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">25</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Łuskowiec" opiekun="1">
+            <nazwa>Łuskowiec indyjski</nazwa>
+            <ilosc plec="m">5</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">100</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">3</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Naczelny" opiekun="1">
+            <nazwa>Sifaka</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">2</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">53</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">4</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Gad ryjogłowy" opiekun="2">
+            <nazwa>Gatteria niespodzianka</nazwa>
+            <ilosc plec="m">1</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">55</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">700</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Łuskonośny" opiekun="2">
+            <nazwa>Jaszczurka kolczasta</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">4</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">12</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">500</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Krokodyl" opiekun="2">
+            <nazwa>Kajman karłowaty</nazwa>
+            <ilosc plec="m">1</ilosc>
+            <ilosc plec="f">1</ilosc>
+            <sredni_wzrost jednostka_wzrostu="m">1.2</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">12</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Igliczniokształtny" opiekun="3">
+            <nazwa>Pławikonik żółty</nazwa>
+            <ilosc plec="m">5</ilosc>
+            <ilosc plec="f">6</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">25</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">200</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Aterynkokształtny" opiekun="3">
+            <nazwa>Tęczniak madagarski</nazwa>
+            <ilosc plec="m">7</ilosc>
+            <ilosc plec="f">7</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">8</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">150</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Bielonokształtny" opiekun="3">
+            <nazwa>Bielona</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">95</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">3</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Rozdymkokształty" opiekun="3">
+            <nazwa>Najeżka</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">30</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">100</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Bezogonowy" opiekun="4">
+            <nazwa>Chwytnica czerwonooka</nazwa>
+            <ilosc plec="m">5</ilosc>
+            <ilosc plec="f">5</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">6</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">50</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Ogoniasty" opiekun="4">
+            <nazwa>Ambystoma znad Pacyfiku</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">30</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">250</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Beznogi" opiekun="4">
+            <nazwa>Płazowiec kolumbijski</nazwa>
+            <ilosc plec="m">1</ilosc>
+            <ilosc plec="f">1</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">40</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">200</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Struś" opiekun="5">
+            <nazwa>Struś</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">2</ilosc>
+            <sredni_wzrost jednostka_wzrostu="m">2</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">120</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Kurak" opiekun="5">
+            <nazwa>Bażant</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">70</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">1.5</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Kurak" opiekun="5">
+            <nazwa>Nogal brunatny</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">3</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">60</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">1.3</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Krótkonogi" opiekun="5">
+            <nazwa>Koliber</nazwa>
+            <ilosc plec="m">5</ilosc>
+            <ilosc plec="f">5</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">8</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">2</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Krótkonogi" opiekun="5">
+            <nazwa>Czubik mały</nazwa>
+            <ilosc plec="m">4</ilosc>
+            <ilosc plec="f">6</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">20</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">100</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Krótkonogi" opiekun="5">
+            <nazwa>Jerzyk zwyczajny</nazwa>
+            <ilosc plec="m">7</ilosc>
+            <ilosc plec="f">7</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">16</sredni_wzrost>
+            <srednia_waga jednostka_wagi="g">40</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Krokodyl" opiekun="5">
+            <nazwa>Krokodyl amerykanski</nazwa>
+            <ilosc plec="m">1</ilosc>
+            <ilosc plec="f">2</ilosc>
+            <sredni_wzrost jednostka_wzrostu="m">6</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">230</srednia_waga>
+        </zwierze>
+        <zwierze rzad="Kurak" opiekun="5">
+            <nazwa>Nogal brunatny</nazwa>
+            <ilosc plec="m">2</ilosc>
+            <ilosc plec="f">1</ilosc>
+            <sredni_wzrost jednostka_wzrostu="cm">70</sredni_wzrost>
+            <srednia_waga jednostka_wagi="kg">5</srednia_waga>
+        </zwierze>
+    </zwierzeta>
+</zoo>

@@ -1,0 +1,73 @@
+gatunki::before {
+    content: "Gatunki:"
+}
+
+gatunki, rzedy {
+    float: left;
+}
+
+gatunek {
+    display: list-item;
+    margin: 3px 3px 3px 20px;
+    width: 150px;
+    text-align: left;
+}
+
+rzedy:before {
+    content: "Rzedy: ";
+}
+
+rzad {
+    display: list-item;
+    margin: 3px 3px 3px 3px;
+    width: 150px;
+    text-align: left;
+
+}
+
+opiekunowie {
+    display: table;
+    float: left;
+
+}
+
+opiekun, zwierze {
+    display: table-row;
+    margin: 3px 3px 3px 3px;
+    width: 150px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+opiekunowie::before {
+    content: "Imie i nazwisko";
+}
+
+zwierzeta {
+    display: table;
+    float: left;
+    margin-left: 20px;
+
+}
+
+zwierzeta::before {
+    content: "Nazwa, ilosc samców, ilośc samic , sredni wzrost , średnia waga ";
+    white-space: nowrap;
+}
+
+
+ilosc, sredni_wzrost, srednia_waga, nazwa, imie, nazwisko {
+    display: table-cell;
+    margin: 3px 3px 3px 3px;
+    width: 150px;
+    text-align: left;
+    border: 1px solid black;
+
+
+}
+sredni_wzrost:after {
+    content: ' ' attr(jednostka_wzrostu);
+}
+srednia_waga:after {
+    content: ' ' attr(jednostka_wagi);
+}

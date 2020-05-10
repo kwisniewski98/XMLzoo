@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:simpleType name="gatunek">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:attribute name="gatunek">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string"/>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:simpleType name="rzadpom">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:complexType name="rzad">
+        <xsd:simpleContent>
+            <xsd:extension base="rzadpom">
+                <xsd:attribute ref="gatunek"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="rzedy">
+        <xsd:sequence>
+            <xsd:element name="rzad" type="rzad" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="gatunki">
+        <xsd:sequence>
+            <xsd:element name="gatunek" type="gatunek" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="opiekunowie">
+        <xsd:sequence>
+            <xsd:element name="opiekun" type="opiekun" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="imie">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="nazwisko">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+
+    <xsd:complexType name="opiekun">
+        <xsd:sequence>
+            <xsd:element name="imie" type="imie"/>
+            <xsd:element name="nazwisko" type="nazwisko"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+    </xsd:complexType>
+
+    <xsd:simpleType name="nazwa">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:attribute name="plec">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="m"/>
+                <xsd:enumeration value="f"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:simpleType name="iloscpom">
+        <xsd:restriction base="xsd:decimal"/>
+    </xsd:simpleType>
+
+    <xsd:complexType name="ilosc">
+        <xsd:simpleContent>
+            <xsd:extension base="iloscpom">
+                <xsd:attribute ref="plec"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:attribute name="jednostka_wzrostu">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="m"/>
+                <xsd:enumeration value="cm"/>
+                <xsd:enumeration value="mm"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:simpleType name="wzrostpom">
+        <xsd:restriction base="xsd:decimal"/>
+    </xsd:simpleType>
+
+    <xsd:complexType name="sredni_wzrost">
+        <xsd:simpleContent>
+            <xsd:extension base="wzrostpom">
+                <xsd:attribute ref="jednostka_wzrostu"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:attribute name="jednostka_wagi">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="g"/>
+                <xsd:enumeration value="kg"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:simpleType name="wagapom">
+        <xsd:restriction base="xsd:decimal"/>
+    </xsd:simpleType>
+
+    <xsd:complexType name="srednia_waga">
+        <xsd:simpleContent>
+            <xsd:extension base="wagapom">
+                <xsd:attribute ref="jednostka_wagi"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="zwierze">
+        <xsd:sequence>
+            <xsd:element name="nazwa" type="nazwa"/>
+            <xsd:element name="ilosc" type="ilosc" maxOccurs="2"/>
+            <xsd:element name="sredni_wzrost" type="sredni_wzrost" maxOccurs="2"/>
+            <xsd:element name="srednia_waga" type="srednia_waga"/>
+        </xsd:sequence>
+        <xsd:attribute name="rzad" type="xsd:string" use="required"/>
+        <xsd:attribute name="opiekun" type="xsd:int" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="zwierzeta">
+        <xsd:sequence>
+            <xsd:element name="zwierze" type="zwierze" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="zoo">
+        <xsd:sequence>
+            <xsd:element name="gatunki" type="gatunki"/>
+            <xsd:element name="rzedy" type="rzedy"/>
+            <xsd:element name="opiekunowie" type="opiekunowie"/>
+            <xsd:element name="zwierzeta" type="zwierzeta"/>
+        </xsd:sequence>
+
+    </xsd:complexType>
+
+    <xsd:element name="zoo" type="zoo">
+        <xsd:key name="idGatunek">
+            <xsd:selector xpath=".//gatunki/gatunek"/>
+            <xsd:field xpath="."/>
+        </xsd:key>
+        <xsd:keyref name="idRef" refer="idGatunek">
+            <xsd:selector xpath=".//rzedy/rzad"/>
+            <xsd:field xpath="@gatunek"/>
+        </xsd:keyref>
+
+        <xsd:key name="idRzad">
+            <xsd:selector xpath=".//rzedy/rzad"/>
+            <xsd:field xpath="."/>
+        </xsd:key>
+        <xsd:keyref name="idRefRzad" refer="idRzad">
+            <xsd:selector xpath=".//zwierzeta/zwierze"/>
+            <xsd:field xpath="@rzad"/>
+        </xsd:keyref>
+
+        <xsd:key name="idOpiekun">
+            <xsd:selector xpath=".//opiekunowie/opiekun"/>
+            <xsd:field xpath="@id"/>
+        </xsd:key>
+        <xsd:keyref name="idRefOpiekun" refer="idOpiekun">
+            <xsd:selector xpath=".//zwierzeta/zwierze"/>
+            <xsd:field xpath="@opiekun"/>
+        </xsd:keyref>
+    </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,30 @@
+<!DOCTYPE zoo [
+        <!ELEMENT zoo (gatunki|rzedy|opiekunowie|zwierzeta)*>
+        <!ELEMENT gatunki (gatunek)*>
+        <!ELEMENT gatunek (#PCDATA)>
+        <!ELEMENT rzedy (rząd)*>
+        <!ELEMENT rząd (#PCDATA)>
+        <!ATTLIST rząd
+                gatunek IDREF #REQUIRED>
+        <!ELEMENT opiekunowie (opiekun)*>
+        <!ELEMENT opiekun (imie|nazwisko)*>
+        <!ATTLIST opiekun
+                id ID #REQUIRED>
+        <!ELEMENT imie (#PCDATA)>
+        <!ELEMENT nazwisko (#PCDATA)>
+        <!ELEMENT zwierzeta (zwierze)*>
+        <!ELEMENT zwierze (nazwa|ilośc|średni_wzrost|średnia_waga)*>
+        <!ATTLIST zwierze
+                opiekun IDREF #REQUIRED
+                rząd IDREF #REQUIRED>
+        <!ELEMENT nazwa (#PCDATA)>
+        <!ELEMENT ilośc (#PCDATA)>
+        <!ATTLIST ilośc
+                płeć CDATA #REQUIRED>
+        <!ELEMENT średni_wzrost (#PCDATA)>
+        <!ATTLIST średni_wzrost
+                jednostka CDATA #REQUIRED>
+        <!ELEMENT średnia_waga (#PCDATA)>
+        <!ATTLIST średnia_waga
+                jednostka CDATA #REQUIRED>
+        ]>
